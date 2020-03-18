@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-final Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+import 'package:flutter_wechat_toast/flutter_wechat_toast.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,11 +9,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: darkBlue),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: MyWidget(),
+        appBar: AppBar(
+          title: Text('Example'),
+        ),
+        body: Column(
+          children: <Widget>[
+            const Expanded(
+              child: const Center(
+                child: const MyWidget(),
+              ),
+            )
+          ],
         ),
       ),
     );
@@ -22,8 +29,35 @@ class MyApp extends StatelessWidget {
 }
 
 class MyWidget extends StatelessWidget {
+  const MyWidget();
   @override
   Widget build(BuildContext context) {
-    return Text('Hello, World!', style: Theme.of(context).textTheme.display1);
+    return Column(
+      children: <Widget>[
+        MaterialButton(
+          child: Text('Toast failed'),
+           onPressed: () => WechatToast(context: context).failed(message: '操作失败'),
+        ),
+        MaterialButton(
+          child: Text('Toast success'),
+          onPressed: () =>
+              WechatToast(context: context).success(message: '操作成功'),
+        ),
+         MaterialButton(
+          child: Text('Toast loading'),
+          onPressed: () async{
+            final Function close =  WechatToast(context: context).loading(message: '加载中');
+
+            await Future.delayed(const Duration(seconds: 5));
+            close();
+          },
+        ),
+        MaterialButton(
+          child: Text('Toast success and remove Mask'),
+          onPressed: () =>
+              WechatToast(context: context, mask: false).success(message: '无遮罩'),
+        ),
+      ],
+    );
   }
 }
