@@ -8,6 +8,7 @@ A wechat styled toast plugin. This package is quite simple, only 3 method requie
 <img width="200" src="https://github.com/virskor/flutterWechatToast/raw/master/QQ20200318-153829@2x.png"/>
 <img width="200" src="https://github.com/virskor/flutterWechatToast/raw/master/QQ20200318-153837@2x.png"/>
 </p>
+
 ## install
 Add following item into your pubspec.yaml
 ```yaml
