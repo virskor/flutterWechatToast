@@ -20,7 +20,6 @@ class WechatToast {
   /// elevation
   final double elevation;
 
-
   /// icon and text  color
   final Color color;
 
@@ -40,7 +39,7 @@ class WechatToast {
     final Function close =
         _showOverlay(icon: icon ?? Icons.remove_circle, text: message);
 
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(duration);
     close();
   }
 
@@ -51,7 +50,7 @@ class WechatToast {
   Future<void> info(String message) async {
     final Function close = _showOverlay(text: message);
 
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(duration);
     close();
   }
 
@@ -82,7 +81,7 @@ class WechatToast {
   Future<void> success({String message = 'OK', Widget icon}) async {
     final Function close =
         _showOverlay(icon: icon ?? Icons.check, text: message);
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(duration);
     close();
   }
 
@@ -167,7 +166,6 @@ class WechatToast {
 
   ///
   /// build icon
-  Widget _buildIcon({dynamic icon}) => icon.runtimeType == IconData
-      ? Icon(icon, size: 40, color: color)
-      : icon;
+  Widget _buildIcon({dynamic icon}) =>
+      icon.runtimeType == IconData ? Icon(icon, size: 40, color: color) : icon;
 }

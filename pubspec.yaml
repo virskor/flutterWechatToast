@@ -1,6 +1,6 @@
 name: flutter_wechat_toast
 description: A wechat styled toast plugin, This package required 3 methods to build a toast widget.  
-version: 1.0.1
+version: 1.0.2
 homepage: https://www.github.com/virskor
 
 environment:
