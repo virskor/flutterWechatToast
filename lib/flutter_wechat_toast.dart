@@ -1,7 +1,8 @@
 library flutter_wechat_toast;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+
+
+/// export rotating widget
+export './src/rotating.dart';
+
+export './src/wechatToast.dart';

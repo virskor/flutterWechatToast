@@ -1,8 +1,8 @@
 name: flutter_wechat_toast
 description: A wechat styled toast plugin
-version: 0.0.1
-author:
-homepage:
+version: 1.0.0
+author: virskor@gmail.com
+homepage: https://www.github.com/virskor
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
