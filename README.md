@@ -1,6 +1,6 @@
 # flutter_wechat_toast
 
-A wechat styled toast plugin. This package is quite simple, only 3 method requied. Make sure you need it or this will be your best choise before your installation.
+A wechat styled toast plugin. This package is quite simple, only 3 methods requied. Make sure you need it or this will be your best choise before your installation.
 
 
 <p>
@@ -12,13 +12,13 @@ A wechat styled toast plugin. This package is quite simple, only 3 method requie
 ## install
 Add following item into your pubspec.yaml
 ```yaml
-flutter_wechat_toast: latest
+flutter_wechat_toast: ^1.0.1
 ```
 
 Recommened you install it from git repo. because this package may contains bugs or changes.
 
 ## Examples and Noticing
-This package required 3 method to build a toast widget.  
+This package required 3 methods to build a toast widget.  
 You can using await to wait toast widget dismissed.
 
 ```dart
